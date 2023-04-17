@@ -23,7 +23,11 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   max-width: 340px;
-  margin: -84px auto 0;
+  margin: -95px auto 0;
+
+  > div:nth-child(4) {
+    margin-top: 24px;
+  }
 `;
 
 export const Avatar = styled.div`
@@ -33,6 +37,7 @@ export const Avatar = styled.div`
   margin: 0 auto 48px;
   > img {
     width: 186px;
+    height: 186px;
     border-radius: 50%;
   }
 
@@ -55,7 +60,7 @@ export const Avatar = styled.div`
     > svg {
       width: 20px;
       height: 20px;
-      color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+      color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     }
     #avatar {
       display: none;
