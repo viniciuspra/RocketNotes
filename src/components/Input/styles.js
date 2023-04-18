@@ -12,7 +12,7 @@ export const Container = styled.div`
   border-radius: 10px;
 
   > svg {
-    margin: 0 16px;
+    margin-left: 16px;
   }
 
   > input {
@@ -22,6 +22,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
     border: 0;
+    padding: 0 16px;
 
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
