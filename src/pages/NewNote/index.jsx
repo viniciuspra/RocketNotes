@@ -1,7 +1,10 @@
 import { Container, Form } from "./styles";
+import { NoteItem } from "../../components/NoteItem";
+import { TextArea } from "../../components/TextArea";
+import { Section } from "../../components/Section";
 import { Header } from "../../components/Header";
-import { ButtonText } from "../../components/ButtonText";
 import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 export function NewNote() {
   return (
@@ -16,7 +19,21 @@ export function NewNote() {
           </header>
 
           <Input placeholder="Título" type="text" />
-          <Input placeholder="Observações" type="text" />
+          <TextArea placeholder="Observações" />
+
+          <Section title="Links úteis">
+            <NoteItem value="https://github.com/Viniciuspra" />
+            <NoteItem isNew placeholder="Novo link" />
+          </Section>
+
+          <Section title="Marcadores">
+            <div className="tags">
+              <NoteItem value="React" />
+              <NoteItem isNew placeholder="Novo marcador" />
+            </div>
+          </Section>
+
+          <Button title="Salvar"/>
         </Form>
       </main>
     </Container>
