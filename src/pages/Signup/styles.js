@@ -9,7 +9,8 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
-  padding: 20px 136px;
+  height: 100vh;
+  padding: 20px 130px;
 
   display: flex;
   flex-direction: column;
@@ -25,7 +26,7 @@ export const Form = styled.form`
 
   > h2 {
     font-size: 24px;
-    margin: 48px 0;
+    margin: 30px 0;
   }
 
   > p {
@@ -34,7 +35,7 @@ export const Form = styled.form`
   }
 
   > a {
-    margin-top: 80px;
+    margin-top: 60px;
     color: ${({ theme }) => theme.COLORS.ORANGE};
   }
 `;
