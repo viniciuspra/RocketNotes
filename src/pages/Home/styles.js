@@ -46,7 +46,7 @@ export const Search = styled.div`
 
 export const Content = styled.div`
   grid-area: content;
-  padding: 64px;
+  padding: 15px 64px 64px;
   overflow-y: auto;
 `
 
