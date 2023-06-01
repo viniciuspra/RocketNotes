@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { v4 as uuidv4 } from 'uuid';
+
 import { FiPlus, FiSearch } from "react-icons/fi";
 
 import { Container, Brand, Menu, Search, Content, NewNote } from "./styles" 
@@ -13,8 +15,10 @@ import { Note } from "../../components/Note";
 import { api } from "../../services/api";
 
 export function Home() {
+  const [search, setSearch] = useState("")
   const [tags, setTags] = useState([])
   const [tagsSelected, setTagsSelected] = useState([])
+  const [notes, setNotes] = useState([])
 
   function handleTagSelected(tagName) {
     if (tagName === "all") {
@@ -37,6 +41,16 @@ export function Home() {
     fetchTags()
   }, [])
 
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}&tags=${tagsSelected}`)
+      setNotes(response.data)
+    }
+
+    fetchNotes()
+
+  },[tagsSelected, search])
+
   const uniqueTags = [...new Set(tags.map(tag => tag.name.toLowerCase()))];
 
   return (
@@ -56,8 +70,8 @@ export function Home() {
           />
         </li>
           {
-            uniqueTags && uniqueTags.map((tagName, index) => (
-              <li key={String(index)}>
+            uniqueTags && uniqueTags.map((tagName) => (
+              <li key={uuidv4()}>
                 <ButtonText
                   title={tagName}
                   onClick={() => handleTagSelected(tagName)}
@@ -69,12 +83,23 @@ export function Home() {
       </Menu>
 
       <Search>
-        <Input placeholder="Pesquisar pelo título" icon={FiSearch} />
+        <Input
+         placeholder="Pesquisar pelo título"
+         icon={FiSearch} 
+         onChange={(e) => setSearch(e.target.value)}
+        />
       </Search>
 
       <Content>
         <Section title="Minhas Notas">
-          <Note data={{title: 'React Modal', tags: [{id: '1', name:'React'}, {id: '2', name: 'Express'}]}}/>  
+          {
+            notes.map(note => (
+              <Note
+                key={uuidv4()}
+                data={note}
+              />
+            ))
+          }
         </Section>
       </Content>
 
