@@ -51,8 +51,6 @@ export function Home() {
 
   },[tagsSelected, search])
 
-  const uniqueTags = [...new Set(tags.map(tag => tag.name.toLowerCase()))];
-
   return (
     <Container>
       <Brand>
@@ -70,12 +68,12 @@ export function Home() {
           />
         </li>
           {
-            uniqueTags && uniqueTags.map((tagName) => (
+            tags && tags.map((tag) => (
               <li key={uuidv4()}>
                 <ButtonText
-                  title={tagName}
-                  onClick={() => handleTagSelected(tagName)}
-                  isActive={tagsSelected.includes(tagName)}
+                  title={tag.name}
+                  onClick={() => handleTagSelected(tag.name)}
+                  isActive={tagsSelected.includes(tag.name)}
                 />
               </li>
             )) 
