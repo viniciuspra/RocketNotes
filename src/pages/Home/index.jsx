@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { v4 as uuidv4 } from 'uuid';
 
 import { FiPlus, FiSearch } from "react-icons/fi";
@@ -19,6 +21,8 @@ export function Home() {
   const [tags, setTags] = useState([])
   const [tagsSelected, setTagsSelected] = useState([])
   const [notes, setNotes] = useState([])
+  
+  const navigate = useNavigate()
 
   function handleTagSelected(tagName) {
     if (tagName === "all") {
@@ -30,6 +34,10 @@ export function Home() {
         setTagsSelected(prevState => [...prevState, tagName]);
       }
     }
+  }
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`)
   }
 
   useEffect(() => {
@@ -95,6 +103,7 @@ export function Home() {
               <Note
                 key={uuidv4()}
                 data={note}
+                onClick={() => handleDetails(note.id)}
               />
             ))
           }
