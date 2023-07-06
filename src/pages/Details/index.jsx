@@ -6,7 +6,7 @@ import { api } from '../../services/api';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { Tag } from '../../components/Mark';
+import { Tag } from '../../Components/Tag';
 import { Header } from '../../Components/Header';
 import { Button } from '../../Components/Button'
 import { Section } from '../../Components/Section';

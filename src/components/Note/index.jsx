@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import { Tag } from "../Mark"	
+import { Tag } from "../Tag";	
 
 export function Note({ data, ...rest }) { 
   
