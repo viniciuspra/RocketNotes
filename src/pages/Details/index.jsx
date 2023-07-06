@@ -6,11 +6,11 @@ import { api } from '../../services/api';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { Tag } from '../../Components/Tag';
-import { Header } from '../../Components/Header';
-import { Button } from '../../Components/Button'
-import { Section } from '../../Components/Section';
-import { ButtonText } from '../../Components/ButtonText';
+import { Tag } from '../../components/Tag';
+import { Header } from '../../components/Header';
+import { Button } from '../../components/Button';
+import { Section } from '../../components/Section';
+import { ButtonText } from '../../components/ButtonText';
 
 
 export function Details() {

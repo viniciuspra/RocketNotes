@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 import { Container, Form } from "./styles";
 
-import { ButtonText } from "../../Components/ButtonText";
-import { NoteItem } from "../../Components/NoteItem";
-import { TextArea } from "../../Components/TextArea";
-import { Section } from "../../Components/Section";
-import { Header } from "../../Components/Header";
-import { Button } from "../../Components/Button";
-import { Input } from "../../Components/Input";
+import { ButtonText } from "../../components/ButtonText";
+import { NoteItem } from "../../components/NoteItem";
+import { TextArea } from "../../components/TextArea";
+import { Section } from "../../components/Section";
+import { Header } from "../../components/Header";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
 
 import { api } from "../../services/api";
 

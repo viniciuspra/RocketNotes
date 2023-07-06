@@ -8,11 +8,11 @@ import { FiPlus, FiSearch } from "react-icons/fi";
 
 import { Container, Brand, Menu, Search, Content, NewNote } from "./styles" 
 
-import { ButtonText } from "../../Components/ButtonText"
-import { Section } from "../../Components/Section"
-import { Header } from "../../Components/Header"
-import { Input } from "../../Components/Input";
-import { Note } from "../../Components/Note";
+import { ButtonText } from "../../components/ButtonText"
+import { Section } from "../../components/Section"
+import { Header } from "../../components/Header"
+import { Input } from "../../components/Input";
+import { Note } from "../../components/Note";
 
 import { api } from "../../services/api";
 
