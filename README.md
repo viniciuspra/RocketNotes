@@ -4,8 +4,8 @@
  
   RocketNotes é uma aplicação para criar notas personalizadas. Organize suas informações de forma eficiente adicionando links e tags às suas notas. Nunca perca uma ideia importante novamente. Simplifique sua vida e aumente sua produtividade com o RocketNotes!
 
-  <img src="https://img.shields.io/github/last-commit/viniciuspra/FilmFanatic" alt="GitHub last commit">
-  <img src="https://img.shields.io/github/languages/top/viniciuspra/FilmFanatic" alt="GitHub top language"> 
+  <img src="https://img.shields.io/github/last-commit/viniciuspra/RocketNotes" alt="GitHub last commit">
+  <img src="https://img.shields.io/github/languages/top/viniciuspra/RocketNotes" alt="GitHub top language"> 
   
 </div>
 
